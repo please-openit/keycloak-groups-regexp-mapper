@@ -1,4 +1,4 @@
-package it.pleaseopen.authenticator.filterip;
+package it.pleaseopen.protocolmapper.groupfilterregexp;
 
 import org.keycloak.models.GroupModel;
 import org.keycloak.models.ProtocolMapperModel;

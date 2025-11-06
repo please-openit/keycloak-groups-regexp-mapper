@@ -2,26 +2,29 @@
 
 *By please-open.it*
 
-Ce projet a pour objet un mapper d'attributs utilisateur (groupes auxquels il appartient) en filtrant le nom des groupes remontés par REGEX.
+This mapper allows to map groups that only fits to a regexp (by name). 
 
-## Installation dans Keycloak
+It avoids mapping all user groups into a token.
+
+## Installation
 
 ```
 mvn clean install
 ```
 
-Copier le fichier JAR généré dans "deployment" vers le répertoire "providers" de Keycloak. Puis redémarrer le serveur Keycloak.
+Copy generated JAR file from "deployment" directory into "providers" in Keycloak. Restart Keycloak.
 
-## Utilisation
+## Usage
 
-Il est recommandé d'avoir des scopes "client scopes" dédiés pour cet usage. 
+We recommend a dedicated scope for this mapper.
 
-Ajouter un mapper par "Add Mapper" puis "by configuration".
+Add a mapper with "Add Mapper" then "by configuration"
 
 ![alt text](image.png)
 
-La configuration est identique au mapper de groupes de Keycloak à l'exception du champ "regexp" : 
+The configuration is the same as the "groups" mapper in Keycloak, except on "regexp" field ; 
 
 ![alt text](image-1.png)
 
-Le module utilise "Pattern" : https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html
+
+The module use "Pattern" : https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html
